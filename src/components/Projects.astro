@@ -1,0 +1,95 @@
+---
+const projects = [
+    {
+        title: "Pokémon TCG Deck Creator",
+        description: "This Android app is designed for generating deck lists in the Pokémon Trading Card Game. Users can search for the cards they want, add them to their deck, and later export it for use in Pokémon TCG Live. The project utilizes an API call to retrieve data for the cards.",
+        tags: ['Angular', 'Ionic', 'TypeScript'],
+        images: ['src/assets/img/tcg1.jpeg', 'src/assets/img/tcg2.jpeg', 'src/assets/img/tcg3.jpeg']
+    },
+    {
+        title: "Forotome",
+        description: "An online forum created for use with my friends. The back-end is built in PHP/Symfony, while the front-end is developed with Angular/Ionic. It implements a registration system with invitations, allowing users to create and respond to posts. It includes basic CRUD functionality for all the content on the website.",
+        tags: ['Angular', 'PHP', 'MySQL'],
+        images: ['src/assets/img/otome.jpeg']
+    },
+    {
+        title: "Minicraft",
+        description: "A project created during the summer to enhance my coding skills. It runs on the Ursina Engine and serves as a basic Minecraft clone. It randomly generates terrain, allowing players to jump, run, and move freely. Additionally, players can place and destroy various types of blocks.",
+        tags: ['Python'],
+        images: ['src/assets/img/minicraft.png']
+    }
+];
+
+---
+
+{
+    projects.map((project) => (
+        <article class="pt-5">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{project.title}</h3>
+            <p class="mb-4 text-xl font-normal">{project.description}</p>
+            <div class="flex space-x-2 max-width-740">
+                {project.tags.map((tag) => (
+                    <div class="chip py-1 px-2 rounded"><span>{tag}</span></div>
+                ))}
+            </div>
+            <div class="flex flex-row rounded-box shadow shadow-red rounded">
+                {project.images.map((imageUrl, index) => (
+                    <div class="carousel-item w-full rounded mt-10 mb-10">
+                        <img src={imageUrl} class="w-full" alt={`Image ${index + 1}`} />
+                    </div>
+                ))}
+            </div>
+        </article>
+    ))
+
+}
+
+
+<style>
+
+    img {
+		view-timeline-name: --revealing-image;
+		view-timeline-axis: block;
+
+		animation-name: show;
+		animation-timing-function: ease;
+		animation-fill-mode: both;
+		animation-timeline: --revealing-image;
+		animation-range: entry 25% cover 50%;
+	}
+	@keyframes show {
+	from {
+		opacity: 0;
+		scale: 25%;
+	}
+	to {
+		opacity: 1;
+		scale: 100%;
+	}
+	}
+
+    div {
+        color: #f21341;
+    }
+
+    .chip{
+        background-color: #f21341;
+    }
+
+    span{
+        color: #141314;
+    }
+    
+    time {
+        opacity: 0.8;
+        color: #f21341;
+    }
+
+    h3{
+        color: #f21341;
+    }
+
+    p{
+        color: #f21341;
+    }
+</style>

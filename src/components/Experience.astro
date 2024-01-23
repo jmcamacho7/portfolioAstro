@@ -1,0 +1,34 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const experience = [
+    {
+        date: 'December 2022 - March 2023',
+        title: 'PHP & Wordpress Developer',
+        place: 'Be Beyond',
+        description: 'Three-month internship developing WordPress sites, proficient in creating and managing functional pages, skilled in Plesk for site management, and holds a PHP development certificate.'
+    },
+    {
+        date: 'March 2023 - Current',
+        title: 'Full Stack Developer',
+        place: 'Be Beyond',
+        description: 'Specialized in full-stack projects, excelling in PHP with Symfony for robust backend and API integration. Proficient in intuitive UI development with Angular and Ionic. Implemented automated testing strategies (Selenium) for quality assurance. Expanded skills with Java and PostgreSQL, emphasizing efficiency across all development stages.'
+    }
+]
+---
+
+<ol class="relative border-s">                  
+    {
+        experience.map((experience) => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {... experience}/>
+            </li>
+        ))
+    }
+</ol>
+
+<style>
+    ol {
+        border-color: #f21341;
+    }
+</style>

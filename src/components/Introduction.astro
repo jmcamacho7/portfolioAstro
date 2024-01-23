@@ -1,0 +1,111 @@
+<div class="navStyle ">
+    <div class="red-gradient zoomInDown">
+      <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+        <filter id="noiseFilter">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="8.66"
+            numOctaves="1"
+            stitchTiles="stitch"
+          />
+        </filter>
+  
+        <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+      </svg>
+    </div>
+  
+    <div class="text fadeInDown">
+      <div class="subtitle">FULL STACK DEVELOPER</div>
+      <div class="title">Juan Manuel</div>
+      <div class="iconContainer">
+        <a href="https://github.com/jmcamacho7"><img class="icon"  src="src/assets/icon/github.svg" /></a>
+        <a href="https://www.linkedin.com/in/jmcamacho7/"><img class="icon" src="src/assets/icon/linkedin.svg" /></a>
+      </div>
+    </div>
+</div>
+
+
+<style>
+    :root {
+        --main-gradient: linear-gradient(90deg, rgba(2, 0, 1, 1) 40%, rgba(242, 25, 67, 1) 100%);
+        --red-gradient: linear-gradient(188deg, rgba(234, 21, 69, 1) 0%, rgba(132, 5, 30, 1) 51%, rgba(67, 0, 4, 1) 100%);
+    }
+
+    .navStyle {
+        background: var(--main-gradient);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+        border-bottom: 5px solid #3d0206;
+    }
+
+    .iconContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .red-gradient {
+        width: 300px;
+        height: 300px;
+        background: var(--red-gradient);
+        border-radius: 50%;
+        transform: rotate(-90deg);
+        position: relative;
+        margin-right: 30%;
+    }
+
+    .red-gradient svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        border-radius: 50%;
+    }
+
+    .text {
+        position: absolute;
+        text-align: center;
+        color: #f21341;
+        font-family: "Work Sans", sans-serif;
+        margin-top: 40px;
+    }
+
+    .text .subtitle {
+        font-size: 2.5em;
+        line-height: 1;
+    }
+
+    .text .title {
+        font-size: 10em;
+        font-family: "VirtualBoy", sans-serif;
+        line-height: 1.2;
+    }
+
+    .icon {
+        margin: 0 10px;
+        height: 30px;
+        width: 30px;
+        filter: invert(13%) sepia(90%) saturate(5870%) hue-rotate(342deg) brightness(99%) contrast(91%);
+    }
+
+    @media (max-width: 600px) {
+        .text .title {
+            font-size: 5em;
+        }
+
+        .text .subtitle {
+            font-size: 1.5em;
+        }
+
+        .red-gradient {
+            width: 150px;
+            height: 150px;
+        }
+
+        .navStyle {
+            background: var(--main-gradient);
+        }
+    }
+</style>

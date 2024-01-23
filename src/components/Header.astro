@@ -1,0 +1,71 @@
+<div class="containerNavbar rounded-md p-4">
+    <header class="flex justify-center items-center py-3 max-w-1120px mx-auto">
+        <nav class="flex gap-x-10 pr-10 pl-10 rounded">
+            <a class="linkRef" href="#home">Home</a>
+            <a class="linkRef" href="#experience">Experience</a>
+            <a class="linkRef" href="#projects">Projects</a>
+            <a class="linkRef" href="#contact">Contact</a>
+        </nav>
+    </header>
+</div>
+
+
+
+<style>
+
+@import url('../animations.scss');
+    .containerNavbar {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+    @supports (animation-timeline: view()) {
+        @keyframes fade-in {
+            from { opacity: 0 }
+            to   { opacity: 1 }
+        }
+        
+        @keyframes shadow-in {
+            to { box-shadow: 0 10px 10px #0003 }
+        }
+    }
+
+    .containerNavbar.hide {
+        transform: translateY(-100%);
+    }
+
+    .containerNavbar {
+        transition: background-color 0.3s ease;
+    }
+
+    nav{
+        background-color: black;
+        animation: fade-in auto linear both;
+        animation-timeline: scroll();
+        animation-range: 0% 300px;
+    }
+
+    a {
+        font-family: "VirtualBoy", sans-serif;
+        color: #f21341;
+        font-size: 1.3em;
+    }
+
+    a {
+        box-shadow: inset 0 0 0 0 #f21341;
+        color: #f21341;
+        margin: 0 -.25rem;
+        padding: 0 .25rem;
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    }
+    a:hover {
+        box-shadow: inset 100px 0 0 0 #f21341;
+        color: black;
+    }
+</style>
+
