@@ -1,6 +1,7 @@
 ---
 import Experience from '../components/Experience.astro';
 import Introduction from '../components/Introduction.astro';
+import Home from '../components/Home.astro';
 import Projects from '../components/Projects.astro';
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
@@ -9,40 +10,16 @@ import Footer from '../components/Footer.astro';
 <Layout title="Portfolio Juan Manuel - Web Developer & Programmer">
 	<main>
 		<Introduction />
-		<section id="home" class="w-full mx-auto lg:w-[740px] pt-20 fadeInRight px-4">
-			<h1 class="text-5xl flex flex-row pb-5">Hello, I'm Juanma! <img class="rounded-full size-12 ml-10" src="/assets/img/jmc.jpeg"> </h1>
-			<h2 class="text-xl pt-5">
-				Web developer and graphic designer based in Seville, Spain. I merge the best of both worlds to deliver an excellent user experience in all my projects.
-			</h2>
-			<h2 class="text-xl pt-5">
-				I enjoy working with a variety of technologies. My go-to stack includes MySQL, PHP with Symfony, and Angular with Ionic. However, I'm always eager to explore new things! (For instance, this portfolio is crafted with Astro and Tailwind CSS)
-			</h2>
-
-			<div class="p-6  rounded-lg pt-20">
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
-				  <div class="flex items-center justify-center space-x-4">
-					<img class="logos h-12" src="/assets/icon/angular.svg" alt="Angular" />
-					<img class="logos h-12" src="/assets/icon/php.svg" alt="PHP" />
-					<img class="logos h-12" src="/assets/icon/symfony.svg" alt="Symfony" />
-				  </div>
-				  <div class="flex items-center justify-center space-x-4">
-					<img class="logos h-12" src="/assets/icon/mysql.svg" alt="MySQL" />
-					<img class="logos h-12" src="/assets/icon/postgresql.svg" alt="PostgreSQL" />
-					<img class="logos h-12" src="/assets/icon/ionic.svg" alt="Ionic" />
-				  </div>
-				</div>
-			</div>
-			  
-		</section>
-		<section id="experience" class="w-full mx-auto lg:w-[740px] pt-20 px-4">
+		<Home />
+		<section id="experience" class="w-full mx-auto lg:w-[1400px] pt-20 px-4">
 			<h1 class="text-5xl flex flex-row pb-5 text-right">Experience</h1>
 			<Experience/>
 		</section>
-		<section id="projects" class="w-full mx-auto lg:w-[740px] pt-20 px-4">
+		<section id="projects" class="w-full mx-auto lg:w-[1400px] pt-20 px-4">
 			<h1 class="text-5xl flex flex-row pb-5 text-right">Projects</h1>
 			<Projects/>
 		</section>
-		<section id="contact" class="w-full mx-auto lg:w-[740px] pt-20 px-4">
+		<section id="contact" class="w-full mx-auto lg:w-[1400px] pt-20 px-4">
 			<h1 class="text-5xl flex flex-row pb-5 text-right">Contact</h1>
 			<h2 class="text-xl pt-5">
 				<b>Email:</b> camachosanchezjm@gmail.com
@@ -56,7 +33,6 @@ import Footer from '../components/Footer.astro';
 </Layout>
 
 <style>
-
 	h1 {
 		font-family: "VirtualBoy", sans-serif;
 		color: #f21341;
@@ -65,10 +41,5 @@ import Footer from '../components/Footer.astro';
 	h2 {
 		color: #f21341;
   		font-family: "Work Sans", sans-serif;
-	}
-	.logos {
-		width: 200px;
-		aspect-ratio: 3/2;
-		object-fit: contain;
 	}
 </style>
